@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"regexp"
+)
 
 func main() {
 	fmt.Println("Hello world")
@@ -10,4 +13,8 @@ func main() {
 	a = 1
 	b = 2
 	fmt.Println("sum: ", a+b)
+
+	// regex
+	match, _ := regexp.MatchString("p([a-z]+)ch", "peach")
+	fmt.Println(match)
 }
